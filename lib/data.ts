@@ -172,43 +172,6 @@ export const education = {
   rollNo: "CB.SC.U4CSE23441",
 };
 
-// ─── Testimonials ─────────────────────────────────────────────────────────────
-
-export const testimonials = [
-  {
-    quote:
-      "Sadhana brings a rare combination of deep technical rigor and creative elegance. Her ML pipeline work at Infosys was exceptional — clean, well-documented, and genuinely thoughtful.",
-    name: "Priya Raghavan",
-    role: "Senior ML Engineer",
-    company: "Infosys Springboard",
-    avatar: null,
-  },
-  {
-    quote:
-      "What sets Sadhana apart is how she thinks end-to-end. She doesn't just build features — she builds systems. CowKin's edge deployment was a masterclass in resource-constrained engineering.",
-    name: "Dr. Anand Kumar",
-    role: "Research Mentor",
-    company: "Amrita Vishwa Vidyapeetham",
-    avatar: null,
-  },
-  {
-    quote:
-      "Sadhana's SakhiCircle dashboard was beautiful and functional. She understood the social impact deeply and translated that into a product that real SHG members could use confidently.",
-    name: "Meenakshi Sundaram",
-    role: "Programme Lead",
-    company: "FinTech Innovation Lab",
-    avatar: null,
-  },
-  {
-    quote:
-      "Incredibly disciplined and focused — both as a developer and as an individual. Sadhana leads with clarity and ships with quality. A true asset to any team.",
-    name: "Kavitha Nair",
-    role: "Project Coordinator",
-    company: "Education New Zealand",
-    avatar: null,
-  },
-];
-
 // ─── Certifications ───────────────────────────────────────────────────────────
 
 export const certifications = [

@@ -2,7 +2,6 @@
 
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import Image from "next/image";
 import { personal, stats } from "@/lib/data";
 
 function AnimatedStat({
@@ -167,7 +166,7 @@ export default function About() {
           }}
           className="about-grid"
         >
-          {/* Left: Photo */}
+          {/* Left: Availability poster */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -181,25 +180,99 @@ export default function About() {
                 overflow: "hidden",
                 boxShadow: "0 20px 60px rgba(255,111,145,0.15)",
                 aspectRatio: "3/4",
+                background:
+                  "linear-gradient(145deg, #fff6e8 0%, #ffe1e7 48%, #d9c4eb 100%)",
+                padding: "clamp(28px, 5vw, 56px)",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
               }}
             >
-              <Image
-                src="/images/profile.jpg"
-                alt="Sadhana T P — Full Stack Developer"
-                fill
-                style={{ objectFit: "cover" }}
-                sizes="(max-width: 768px) 100vw, 40vw"
-                priority
-              />
-              {/* Soft overlay */}
               <div
                 style={{
                   position: "absolute",
-                  inset: 0,
-                  background:
-                    "linear-gradient(to top, rgba(255,111,145,0.1), transparent 40%)",
+                  width: "70%",
+                  aspectRatio: "1",
+                  top: "12%",
+                  right: "-18%",
+                  border: "1px solid rgba(58,46,48,0.16)",
+                  borderRadius: "50%",
+                  boxShadow:
+                    "0 0 0 24px rgba(255,255,255,0.2), 0 0 0 48px rgba(255,255,255,0.14)",
                 }}
               />
+              <div
+                style={{
+                  position: "absolute",
+                  width: "220px",
+                  height: "220px",
+                  left: "-100px",
+                  bottom: "-70px",
+                  borderRadius: "42% 58% 55% 45%",
+                  background: "rgba(255,255,255,0.32)",
+                  transform: "rotate(-18deg)",
+                }}
+              />
+              <span
+                style={{
+                  position: "relative",
+                  fontFamily: "var(--font-poppins-sans)",
+                  fontSize: "0.7rem",
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: "var(--text-muted)",
+                }}
+              >
+                Currently available
+              </span>
+              <div style={{ position: "relative" }}>
+                <div
+                  style={{
+                    fontFamily: "var(--font-playfair-display)",
+                    fontSize: "clamp(4rem, 10vw, 8rem)",
+                    fontStyle: "italic",
+                    lineHeight: 0.9,
+                    color: "var(--text-primary)",
+                    letterSpacing: "-0.06em",
+                  }}
+                >
+                  ST
+                </div>
+                <div
+                  style={{
+                    marginTop: "24px",
+                    maxWidth: "240px",
+                    fontFamily: "var(--font-caveat-script)",
+                    fontSize: "clamp(1.4rem, 3vw, 2rem)",
+                    lineHeight: 1.15,
+                    color: "var(--accent)",
+                  }}
+                >
+                  Open to work with thoughtful teams ✦
+                </div>
+              </div>
+              <div
+                style={{
+                  position: "relative",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  fontFamily: "var(--font-poppins-sans)",
+                  fontSize: "0.72rem",
+                  color: "var(--text-muted)",
+                }}
+              >
+                <span
+                  style={{
+                    width: "9px",
+                    height: "9px",
+                    borderRadius: "50%",
+                    background: "#4caf50",
+                    boxShadow: "0 0 0 5px rgba(76,175,80,0.12)",
+                  }}
+                />
+                Full stack · AI/ML · Product
+              </div>
             </div>
 
             {/* Washi-tape badge */}
